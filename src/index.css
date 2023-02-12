@@ -1,0 +1,525 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  color: black;
+  font-family: "Rubik", sans-serif;
+  overflow-x: hidden;
+}
+
+body.sidebaropen {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.signIn{
+  overflow-y: scroll;
+  margin-bottom: 11px;
+}
+
+#overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+
+.back {
+  display: none;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  scroll-snap-align: start;
+}
+
+.container.blur {
+  filter: blur(3px);
+}
+
+.main.blur {
+  filter: blur(3px);
+}
+
+.itemText {
+  padding-top: 15vh;
+  text-align: center;
+}
+
+.itemText h1 {
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 2.5em;
+}
+
+.itemText p {
+  font-weight: 300;
+  text-underline-offset: 3px;
+}
+
+.buttonsec {
+  padding-bottom: 11vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.buttonsec button {
+  border: none;
+  height: 40px;
+  width: 256px;
+  font-size: 15px;
+  border-radius: 4px;
+  margin: 11px;
+  cursor: pointer;
+}
+
+.buttonsec .leftButton {
+  background-color: rgb(63, 64, 68);
+  color: white;
+}
+
+.buttonsec .rightButton {
+  background-color: rgb(234, 234, 233);
+  color: black;
+}
+
+nav {
+  position: fixed;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0px 47px;
+  width: 100%;
+  justify-content: space-between;
+  z-index: 3;
+}
+
+nav.blur {
+  filter: blur(3px);
+}
+
+img {
+  height: 15px;
+  width: 119px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.products {
+  display: flex;
+  align-items: center;
+  margin-left: 110px;
+}
+
+.products a {
+  flex-wrap: nowrap;
+  padding: 11px 10px;
+  transition: all 0.5s ease;
+  margin-left: 11px;
+}
+
+.links a {
+  padding: 11px 19px;
+  transition: all 0.5s ease;
+}
+
+.products a:hover,
+.links a:hover {
+  background-color: rgba(90, 90, 90, 0.1);
+  border-radius: 6px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 288px;
+  background-color: white;
+  color: rgb(57, 60, 65);
+  padding: 90px 38px;
+  z-index: 10;
+  transform: translateX(100%);
+  transition: 0.5s ease;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.sidebar.active {
+  transform: translateX(0%);
+}
+.sidebar p {
+  margin-bottom: 3px;
+  transition: 0.5s ease;
+  padding: 9px;
+  width: 220px;
+  font-weight: lighter;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.sidebar p:hover {
+  background-color: rgba(90, 90, 90, 0.1);
+  border-radius: 6px;
+}
+
+.close {
+  position: absolute;
+  top: 33px;
+  right: 11px;
+  cursor: pointer;
+  padding: 5px;
+  transition: 0.5s ease;
+}
+
+.close:hover {
+  background-color: rgba(90, 90, 90, 0.1);
+  border-radius: 6px;
+}
+
+.language {
+  display: flex;
+}
+
+.chosen div {
+  margin-left: 11px;
+}
+
+small {
+  margin-left: 11px;
+}
+
+.links a {
+  cursor: pointer;
+}
+
+.menuProducts {
+  display: none;
+}
+
+.home {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.infos {
+  color: white;
+  display: flex;
+  padding-bottom: 7vh;
+  text-align: center;
+  align-items: center;
+}
+
+.info {
+  margin: 0px 33px;
+}
+
+.info h2 {
+  font-weight: 500;
+}
+
+.info p {
+  margin-top: 7px;
+}
+
+.infoButton {
+  width: 200px;
+  height: 40px;
+  background-color: transparent;
+  border: 4px white solid;
+  margin-left: 19px;
+  color: white;
+  font-size: 1.1em;
+  transition: all 0.5s;
+}
+
+.infoButton:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.interior {
+  background-color: black;
+  color: white;
+}
+
+.interior-title-sec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 172px;
+  width: 100%;
+}
+
+.interior-title {
+  font-weight: 500;
+}
+
+.interior-img {
+  background-image: url("../public/img/new-interior.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 80vh;
+}
+
+.interior-section {
+  margin-top: 10vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  min-width: 60vw;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 33px;
+}
+
+.row h3 {
+  font-weight: 400;
+}
+
+.row .img {
+  width: 100%;
+  flex-wrap: wrap;
+  height: 300px;
+}
+
+.col-text {
+  width: 404px;
+  height: 192px;
+  margin: auto;
+  padding: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.col-text p {
+  line-height: 19px;
+}
+
+.signIn img {
+  margin: 19px 41px;
+}
+
+.signIn h1 {
+  font-weight: 400;
+}
+
+.sign-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  margin-top: 6vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 33vh;
+}
+
+label {
+  color: #5c5e62;
+  font-weight: 400;
+  font-size: 0.95rem;
+  padding-left: 15px;
+}
+input {
+  background-color: #f4f4f4;
+  margin-bottom: 20px;
+  outline: none;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+form button {
+  border: none;
+  padding: 12px 20px;
+  letter-spacing: 0.6px;
+  border-radius: 25px;
+  color: white;
+  text-transform: uppercase;
+  background-color: #3d69e1;
+  cursor: pointer;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.line span {
+  color: #5c5e62;
+}
+
+hr {
+  width: 150px;
+}
+
+.create-button {
+  width: 330px;
+  background-color: transparent;
+  border: 4px black solid;
+  color: black;
+  transition: all 0.5s;
+  padding: 12px 20px;
+  font-size: 0.85rem;
+  letter-spacing: 0.6px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.create-button:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.acc {
+  background-color: white;
+}
+
+.main {
+  display: flex;
+  padding-top: 15vh;
+}
+
+.navbar {
+  padding-left: 50px;
+  margin-top: 40px;
+  width: 28vw;
+}
+
+.navbar a {
+  font-size: 1.3rem;
+  letter-spacing: 0.6px;
+  color: #5c5d61;
+  display: flex;
+  padding: 19px 11px 19px 11px;
+}
+
+.navbar a .navbar-text {
+  margin-left: 11px;
+}
+
+.main h1 {
+  font-weight: 400;
+}
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 320px;
+  height: 220px;
+  border: 1px grey solid;
+  border-radius: 15px;
+  margin: 10px;
+  display: flex;
+  align-items: flex-end;
+  font-size: 14px;
+}
+
+.box1 {
+  background-image: url("../public/img/solar-panel.jpg");
+  background-position: 0px -100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box2 {
+  background-image: url("../public/img/cars.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box3 {
+  background-image: url("../public/img/3rd-party.png");
+  background-position: 0px -20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: white;
+}
+
+.desc {
+  height: 110px;
+  width: 320px;
+  background-color: white;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding: 19px;
+  font-weight: 300;
+}
+
+.desc p {
+  margin-bottom: 11px;
+}
+
+.desc a {
+  text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+  .products {
+    display: none;
+  }
+  .links a:first-child {
+    display: none;
+  }
+  .links a:nth-child(2) {
+    display: none;
+  }
+  .menuProducts {
+    display: block;
+  }
+  .navbar-text {
+    display: none;
+  }
+  .navbar {
+    padding-left: 11px;
+  }
+}
