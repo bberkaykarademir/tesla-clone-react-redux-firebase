@@ -19,7 +19,7 @@ const ModelX = ({ sidebar, setSidebar }) => {
         <Section
           sidebar={sidebar}
           setSidebar={setSidebar}
-          backgroundImg="url('/img/model-X.jpg')"
+          backgroundImg="url('/img/model-x.jpg')"
           title="Model X"
           description="Plaid"
           itemId="modelX"
