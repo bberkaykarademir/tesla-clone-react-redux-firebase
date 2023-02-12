@@ -26,6 +26,7 @@ const ModelS = ({ sidebar, setSidebar }) => {
           range='396'
           speed='1.99'
           top='200'
+          hp="1,020"
         />
         <Interior />
         <Sidebar sidebar={sidebar} setSidebar={setSidebar} />
