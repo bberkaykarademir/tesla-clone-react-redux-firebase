@@ -38,6 +38,7 @@ const Section = ({
       )}
       {range && (
         <div className="infos">
+        <div className="infs">
           <Fade delay={600} bottom>
             <div className="info">
               <h2>{range} mi</h2>
@@ -64,6 +65,7 @@ const Section = ({
               </div>
             </Fade>
           )}
+          </div>
           <Fade delay={1000} bottom>
             <button className="infoButton">Order Now</button>
           </Fade>
