@@ -1,1 +1,1 @@
-https://tesla-clone-react-redux-fb-9dla.vercel.app/
+https://tesla-clone-react-redux-firebase.vercel.app/
