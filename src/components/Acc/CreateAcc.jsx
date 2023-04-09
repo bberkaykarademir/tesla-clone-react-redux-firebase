@@ -21,7 +21,7 @@ const CreateAcc = () => {
   };
   return (
     <div className="signIn">
-      <a href="http://localhost:3000/">
+      <a href="#">
         <img src="/img/logo.svg" />
       </a>
       <div className="sign-section">
