@@ -21,9 +21,9 @@ const CreateAcc = () => {
   };
   return (
     <div className="signIn">
-      <a href="#">
+      <Link to="/">
         <img src="/img/logo.svg" />
-      </a>
+      </Link>
       <div className="sign-section">
         <h1>Create Account</h1>
         <form onSubmit={submitHandler}>
