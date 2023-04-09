@@ -19,9 +19,9 @@ const SignIn = () => {
   };
   return (
     <div className="signIn">
-      <a href="http://localhost:3000/">
+      <Link to="/">
         <img src="/img/logo.svg" />
-      </a>
+      </Link>
       <div className="sign-section">
         <h1>Sign In</h1>
         <form onSubmit={handleSubmit}>
